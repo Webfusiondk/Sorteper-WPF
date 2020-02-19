@@ -1,0 +1,38 @@
+﻿<Window x:Class="SorteperWPF.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SorteperWPF"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800">
+    <DockPanel LastChildFill="True">
+        <Canvas x:Name="LeftCanvas" DockPanel.Dock="Left" Width="120" Height="120" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <RotateTransform Angle="90"></RotateTransform>
+            </Canvas.RenderTransform>
+        </Canvas>
+        <Canvas x:Name="RightCanvas" DockPanel.Dock="Right" Width="120" Height="120" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <RotateTransform Angle="270"></RotateTransform>
+            </Canvas.RenderTransform>
+        </Canvas>
+        <Canvas x:Name="TopCanvas" HorizontalAlignment="Center" DockPanel.Dock="Top" Height="120"></Canvas>
+        <Canvas x:Name="BottomCanvas" HorizontalAlignment="Center" DockPanel.Dock="Bottom" Height="120">
+        </Canvas>
+        <DockPanel LastChildFill="False" x:Name="NamePanel">
+            <Label x:Name="TopName" DockPanel.Dock="Top" HorizontalContentAlignment="Center">Top</Label>
+            <Label x:Name="BottomName" DockPanel.Dock="Bottom" HorizontalContentAlignment="Center">Bottom</Label>
+            <Label x:Name="LeftName" DockPanel.Dock="Left" HorizontalContentAlignment="Center" Height="30" Width="Auto" Margin="30,0,0,0">
+                <Label.RenderTransform>
+                    <RotateTransform Angle="90"/>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="RightName" DockPanel.Dock="Right" HorizontalContentAlignment="Center" Margin="0,70,0,0" Height="30" Width="auto">
+                <Label.RenderTransform>
+                    <RotateTransform Angle="270"/>
+                </Label.RenderTransform>
+            </Label>
+        </DockPanel>
+    </DockPanel>
+</Window>
